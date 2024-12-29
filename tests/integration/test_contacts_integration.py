@@ -16,8 +16,7 @@ def test_get_contacts(client):
 
 
 def test_response_time_get2(client):
-    user_id=1
     start = time.time()
-    response = client.get(f"{BASE_URL}/{user_id}")
+    response = client.get(f"{BASE_URL}")
     end = time.time()
     assert end -start < 0.4, "GET response time is too slow"
