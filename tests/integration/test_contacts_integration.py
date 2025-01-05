@@ -29,6 +29,7 @@ def test_content_type_header_post(client):
     response = client.post(url)
     assert "Content-Type" in response.headers
 
+
 def test_create_contacts_post(client):
     new_contact={
         "name": "new name",
